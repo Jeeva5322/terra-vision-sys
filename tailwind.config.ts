@@ -80,10 +80,35 @@ export default {
             height: "0",
           },
         },
+        orbit: {
+          from: { transform: "rotate(0deg) translateX(100%) rotate(0deg)" },
+          to: { transform: "rotate(360deg) translateX(100%) rotate(-360deg)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
+        scan: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        orbit: "orbit 20s linear infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        scan: "scan 2s ease-in-out",
+      },
+      backgroundImage: {
+        "earth-gradient": "var(--earth-gradient)",
+        "forest-gradient": "var(--forest-gradient)",
+        "ocean-gradient": "var(--ocean-gradient)",
+        "alert-gradient": "var(--alert-gradient)",
+      },
+      boxShadow: {
+        elevated: "var(--shadow-elevated)",
+        card: "var(--shadow-card)",
       },
     },
   },
